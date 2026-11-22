@@ -1,5 +1,5 @@
 // Increment the cache version when changing the app shell.
-const CACHE_NAME = 'dnd-support-neforiciy-v4';
+const CACHE_NAME = 'dnd-support-neforiciy-v5';
 const SHELL = new URL('index.html', self.registration.scope).href;
 const ASSETS = [
   SHELL,
