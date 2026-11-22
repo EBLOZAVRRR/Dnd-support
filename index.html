@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/><meta content="#15111f" name="theme-color"/><title>D&amp;D Support — Нефориций</title><meta name="application-name" content="D&D Support"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="D&D Support"><meta name="mobile-web-app-capable" content="yes"><link rel="manifest" href="./manifest.webmanifest"><link rel="apple-touch-icon" href="./icons/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192.png"><style>
+<html lang="ru"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/><meta content="#15111f" name="theme-color"/><title>D&amp;D Support — Нефориций</title><meta name="application-name" content="D&D Support"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="D&D Support"><meta name="mobile-web-app-capable" content="yes"><link rel="manifest" href="./manifest.webmanifest"><link rel="apple-touch-icon" href="./apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png"><style>
 :root{color-scheme:dark;--bg:#0b0e13;--surface:#161b23;--surface2:#1e2530;--edge:#323945;--text:#f1eee8;--muted:#a6acb6;--gold:#d2b47c;--gold2:#ead6aa;--red:#db797e;--green:#83cbb0}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.45 system-ui,-apple-system,'Segoe UI',Arial,sans-serif}button,input,textarea,select{font:inherit}button{cursor:pointer;color:inherit;-webkit-tap-highlight-color:transparent}button:disabled{opacity:.42;cursor:not-allowed}h1,h2,h3,p{margin-top:0}h1{font-size:clamp(23px,4vw,35px);letter-spacing:-.035em;margin:4px 0 6px}h2{font-size:18px;letter-spacing:-.015em;margin-bottom:12px}h3{font-size:15px;margin-bottom:8px}.shell{max-width:850px;margin:auto;padding:12px 14px 100px}.hero{display:flex;gap:13px;align-items:center;margin:4px 0 13px;padding:11px;background:linear-gradient(120deg,#1a202a,#12171f);border:1px solid #333744;border-radius:18px}.hero-info{min-width:0;flex:1}.eyebrow{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:650}.hero-desc{font-size:12px;color:var(--muted)}.avatar{width:70px;height:76px;flex:none;border-radius:11px;overflow:hidden;background:#242331}.avatar img{height:100%;width:100%;object-fit:cover;object-position:50% 25%}.tabs{display:flex;position:fixed;z-index:20;bottom:0;left:0;right:0;justify-content:center;gap:5px;padding:9px max(10px,env(safe-area-inset-right)) calc(9px + env(safe-area-inset-bottom)) max(10px,env(safe-area-inset-left));border-top:1px solid var(--edge);background:#10151cf5;backdrop-filter:blur(18px)}.tab{flex:1;max-width:190px;padding:10px 4px;border:1px solid transparent;background:transparent;color:var(--muted);border-radius:12px;font-size:12px;font-weight:650}.tab.active{background:#292b29;color:var(--gold2);border-color:#675941}.page{display:none}.page.active{display:block}.card{padding:15px;margin:10px 0;border-radius:17px;background:var(--surface);border:1px solid var(--edge)}.metric{background:var(--surface2);border-radius:13px;border:1px solid #303947;padding:10px 8px;text-align:center;min-width:0}.metric strong{font-size:24px;display:block;line-height:1.18}.metric span{color:var(--muted);font-size:11px}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}.row{display:flex;align-items:center;justify-content:space-between;gap:10px}.wrap{flex-wrap:wrap}.muted{color:var(--muted)}.small{font-size:12px}.flex1{flex:1;min-width:0}.btn{min-height:40px;padding:9px 12px;border-radius:10px;background:#252c37;border:1px solid #414957;color:#ece9e2}.btn:active{transform:scale(.98)}.btn.primary{background:var(--gold);border-color:var(--gold);color:#181914;font-weight:750}.btn.green{border-color:#426759;background:#244236}.btn.danger{background:#452832;border-color:#734751}.btn.mini{min-height:34px;padding:6px 10px}.btn.ghost{background:transparent;border-color:var(--edge)}.btn.full{width:100%}.counter{display:flex;align-items:center;justify-content:center;gap:7px}.counter strong{min-width:27px;text-align:center}.fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.fields label{font-size:12px;color:var(--muted)}input,select,textarea{background:#0e131a;border:1px solid #414753;border-radius:10px;padding:10px;width:100%;color:var(--text);outline:none}input:focus,textarea:focus,select:focus{border-color:var(--gold)}textarea{resize:vertical}.fields input,.fields select{margin-top:5px}label.checkbox{display:flex;align-items:center;gap:8px}label.checkbox input{width:18px;height:18px;accent-color:var(--gold)}.dots{display:flex;gap:7px;margin:9px 0 15px}.dot{height:32px;flex:1;border-radius:9px;border:1px solid #61605a;background:#282d35}.dot.ready{background:var(--gold);border-color:var(--gold)}.dot b{color:#121512}.item,.spell{padding:11px 0;border-top:1px solid var(--edge)}.item:first-child,.spell:first-child{border-top:0}.item-title{font-weight:700}.desc{color:var(--muted);font-size:12px;margin:4px 0 0}.actions{display:flex;gap:5px;align-items:center;justify-content:flex-end;flex-wrap:wrap}.pill{display:inline-flex;align-items:center;border:1px solid #51493c;background:#292825;color:#e5d0a5;padding:3px 8px;font-size:11px;border-radius:999px}.filters{display:flex;gap:6px;overflow:auto;padding-bottom:8px}.filter,.subtab{white-space:nowrap;border-radius:9px;border:1px solid #3c4653;background:#1e2530;padding:9px 11px;color:var(--muted);font-size:13px}.filter.active,.subtab.active{background:#443d30;border-color:#7c6a47;color:var(--gold2)}.bar{height:8px;background:#2c313b;border-radius:99px;overflow:hidden}.bar>div{height:100%;background:var(--gold)}.money{font-size:18px;font-weight:800}.notice{font-size:12px;background:#20242c;border:1px solid #343945;color:#d0c8b8;padding:10px;border-radius:11px}.right{text-align:right}.hidden{display:none!important}.list{padding-left:18px}.list li{margin:5px 0}.divider{height:1px;background:var(--edge);margin:15px 0}footer{padding:24px 0;color:var(--muted);font-size:11px}.subnav{display:flex;gap:7px;overflow:auto;padding:4px 0 8px;position:sticky;top:0;z-index:5;background:linear-gradient(#0b0e13 75%,#0b0e1300)}.subtab{flex:1;text-align:center;font-weight:650}.subpanel{display:none}.subpanel.active{display:block}.quickmeta{display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin-top:9px}.section-hint{font-size:12px;color:var(--muted)}.choice-card{border:1px solid #3e4653;border-radius:12px;background:#202630;padding:11px;margin:8px 0}.choice-card strong{display:block;margin-bottom:3px}.choice-card p{color:var(--muted);font-size:12px;margin:3px 0 7px}.choice-card button{margin-top:5px}.badge-rec{font-size:10px;letter-spacing:.02em;color:#202016;background:var(--gold);padding:2px 7px;border-radius:20px;margin-left:6px}.empty{padding:12px;color:var(--muted);font-size:13px}.split-head{display:flex;justify-content:space-between;align-items:center;gap:8px}.session-card{padding:12px;background:#1d242e;border:1px solid #3a4452;border-radius:12px;margin:8px 0}.session-card p{white-space:pre-wrap;overflow-wrap:anywhere}.compact-on-mobile .metric{padding:9px 5px}
 @media(min-width:760px){.shell{padding:25px 24px 90px}.tabs{position:sticky;top:0;bottom:auto;max-width:850px;margin:auto;border:0;border-radius:12px;padding:6px}.hero{padding:17px}.avatar{width:105px;height:115px}.card{padding:20px}}
@@ -77,7 +77,7 @@ const defaultSpells=[
 const startItems=[
 ['Кинжал','Оружие',1,1,'Атака +5, 1к4+3 колющий; метательное 20/60 фт.',true],['Чёрный кристалл','Магия',1,1,'Магическая фокусировка.',true],['Книга заклинаний','Книги',1,3,'10 заклинаний в книге, 6 подготовлено.',false],['Рюкзак','Снаряжение',1,5,'Вмещает до 30 фунтов снаряжения.',true],['Научная книга','Книги',1,5,'Из набора учёного; тематика — некромантия.',false],['Чернила','Расходники',2,0,'Бутылочки: одна от набора учёного, другая от Мудреца.',false],['Писчие перья','Снаряжение',2,0,'Для записей и рукописей.',false],['Листы пергамента','Расходники',10,0,'Для заметок.',false],['Небольшие ножи','Снаряжение',2,0,'Канцелярские ножички, не боевое оружие.',false],['Сумочка с песком','Снаряжение',1,0,'Для просушивания чернил.',false],['Письмо умершего коллеги','Квестовые',1,0,'Загадка из прошлого, сюжетный предмет.',false],['Обычная одежда','Одежда',1,3,'Чёрный нефорский стиль; обычная одежда по правилам.',true],['Поясной кошель','Снаряжение',1,1,'Для монет и мелочей.',true]];
 function defaults(){return {level:3,xp:900,levelMode:'xp',abilities:{str:8,dex:16,con:13,int:16,wis:12,cha:10},asiPending:[],hp:17,dice:3,inspiration:false,slots:{1:4,2:2},arcaneUsed:false,spells:structuredClone(defaultSpells),items:startItems.map((a,i)=>({id:i+1,name:a[0],cat:a[1],qty:a[2],weight:a[3],info:a[4],equipped:a[5]})),coins:{cp:0,sp:0,ep:0,gp:10,pp:0},logs:[],sessions:[],feats:[],pendingSpellPicks:0,tempHp:0,concentration:null}}
-let s;try{s=JSON.parse(localStorage.getItem('dnd-support-neforiciy-offline')||localStorage.getItem('necropus-v2'))||defaults();if(!s.items||!s.spells)throw new Error()}catch(e){s=defaults()}
+let s;
 const xpThresholds=[0,300,900,2700,6500,14000,23000,34000,48000,64000,85000,100000,120000,140000,165000,195000,225000,265000,305000,355000];
 const slotProgress=[[],[2],[3],[4,2],[4,3],[4,3,2],[4,3,3],[4,3,3,1],[4,3,3,2],[4,3,3,3,1],[4,3,3,3,2],[4,3,3,3,2,1],[4,3,3,3,2,1],[4,3,3,3,2,1,1],[4,3,3,3,2,1,1],[4,3,3,3,2,1,1,1],[4,3,3,3,2,1,1,1],[4,3,3,3,2,1,1,1,1],[4,3,3,3,3,1,1,1,1],[4,3,3,3,3,2,1,1,1],[4,3,3,3,3,2,2,1,1]];
 const asiLevels=[4,8,12,16,19];
@@ -88,17 +88,38 @@ function slotsMax(l){return (slotProgress[s.level]||[])[l-1]||0}
 function maxSpellCircle(){return Math.min(9,Math.ceil(s.level/2))}
 function preparedMax(){return s.level+mod(s.abilities.int)}
 function cantripMax(){return s.level>=10?6:s.level>=4?5:4}
-function normalizeSave(){s.level=Math.max(3,Math.min(20,Number(s.level)||3));s.xp=Math.max(0,Number(s.xp)||0);s.levelMode=s.levelMode==='milestone'?'milestone':'xp';s.abilities={...{str:8,dex:16,con:13,int:16,wis:12,cha:10},...(s.abilities||{})};s.asiPending=Array.isArray(s.asiPending)?s.asiPending:[];s.sessions=Array.isArray(s.sessions)?s.sessions:[];s.feats=Array.isArray(s.feats)?s.feats:[];s.pendingSpellPicks=Math.max(0,Number(s.pendingSpellPicks)||0);s.tempHp=Math.max(0,Number(s.tempHp)||0);s.concentration=String(s.concentration||'');for(let l=1;l<=9;l++)s.slots[l]=Math.max(0,Math.min(slotsMax(l),Number(s.slots[l])||0));s.hp=Math.max(0,Math.min(maxHp(),s.hp));s.dice=Math.max(0,Math.min(s.level,s.dice))}
-normalizeSave();
+function normalizeSave(data){
+  const base = defaults();
+  const level = Math.max(3,Math.min(20,Math.trunc(Number(data.level)||base.level)));
+  const abilities = {...base.abilities,...data.abilities};
+  for(const key of Object.keys(base.abilities)) abilities[key] ??= base.abilities[key];
+  const max = 17+(level-3)*5+(mod(abilities.con)-1)*level;
+  const clamp = (value, fallback, limit=Infinity) => Math.max(0,Math.min(limit,Number(value ?? fallback)||0));
+  return {
+    ...base,...data,level,abilities,
+    xp:clamp(data.xp,base.xp),
+    levelMode:data.levelMode==='milestone'?'milestone':'xp',
+    hp:clamp(data.hp,max,max),
+    dice:clamp(data.dice,level,level),
+    slots:{...data.slots,...Object.fromEntries(Array.from({length:9},(_,i)=>[i+1,clamp(data.slots?.[i+1],0,slotProgress[level][i]||0)]))},
+    coins:{...base.coins,...data.coins},
+    logs:data.logs??[], sessions:data.sessions??[], feats:data.feats??[], asiPending:data.asiPending??[],
+    pendingSpellPicks:clamp(data.pendingSpellPicks,0),
+    tempHp:clamp(data.tempHp,0),
+    concentration:String(data.concentration||''),
+    conditions:data.conditions??[],
+    customEffects:data.customEffects??[],
+    shortRests:clamp(data.shortRests,0)
+  };
+}
 const el=id=>document.getElementById(id),esc=t=>String(t).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-function save(){localStorage.setItem('dnd-support-neforiciy-offline',JSON.stringify(s));render()}
 function msg(text){s.logs.unshift({t:new Date().toLocaleString('ru-RU'),text});s.logs=s.logs.slice(0,80)}
 function switchPage(p){document.querySelectorAll('.page').forEach(a=>a.classList.toggle('active',a.id===p));document.querySelectorAll('.tab').forEach(a=>a.classList.toggle('active',a.dataset.page===p));window.scrollTo({top:0,behavior:'instant'})}
 document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>switchPage(b.dataset.page)));
 document.querySelectorAll('.subtab').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.subtab[data-subgroup="'+b.dataset.subgroup+'"]').forEach(x=>x.classList.toggle('active',x===b));const p=b.dataset.subgroup==='game'?document.getElementById('game'):document.getElementById('journal');p.querySelectorAll('.subpanel').forEach(x=>x.classList.toggle('active',x.id===b.dataset.sub));}));
 function hpChange(d){s.hp=Math.max(0,Math.min(maxHp(),s.hp+d));save()}function heal(d,why){s.hp=Math.min(maxHp(),s.hp+d);msg(why+': лечение '+d+' ХП');save()}function diceChange(d){s.dice=Math.max(0,Math.min(s.level,s.dice+d));save()}function toggleInspiration(){s.inspiration=!s.inspiration;save()}
 function changeSlots(level,d){s.slots[level]=Math.max(0,Math.min(slotsMax(level),s.slots[level]+d));save()}
-function spendSpell(index,level){let spell=s.spells[index];if(!spell.prepared&&spell.level!==0){alert('Заклинание не подготовлено. Ритуалы можно применять без подготовки только ритуалом.');return}if(level<spell.level)return;if(!s.slots[level]){alert('Нет ячеек этого круга');return}changeSlots(level,-1);msg('Применено: '+spell.name+' ('+level+' кр.)');save()}
+function spendSpell(index,level){let spell=s.spells[index];if(!spell.prepared&&spell.level!==0){alert('Заклинание не подготовлено. Ритуалы можно применять без подготовки только ритуалом.');return}if(level<spell.level)return;if(!s.slots[level]){alert('Нет ячеек этого круга');return}s.slots[level]--;msg('Применено: '+spell.name+' ('+level+' кр.)');save()}
 function cast(index){let sp=s.spells[index];if(sp.level===0){msg('Заговор: '+sp.name);save();return}if(!sp.prepared){alert('Заклинание не подготовлено.');return}let available=Array.from({length:9},(_,i)=>i+1).filter(l=>l>=sp.level&&s.slots[l]>0);if(!available.length){alert('Нет доступных ячеек');return}let level=available[0];if(available.length>1){const choice=prompt('Выбери круг ячейки: '+available.join(', '),String(level));if(choice===null)return;level=Number(choice);if(!available.includes(level)){alert('Недоступная ячейка');return}}spendSpell(index,level)}
 function longRest(){if(!confirm('Завершить продолжительный отдых и восстановить ХП, кости хитов и все ячейки?'))return;s.hp=maxHp();s.slots=Object.fromEntries(Array.from({length:9},(_,i)=>[i+1,slotsMax(i+1)]));s.dice=Math.min(s.level,s.dice+Math.max(1,Math.ceil(s.level/2)));s.arcaneUsed=false;msg('Продолжительный отдых');save()}
 function arcaneRecovery(){if(s.arcaneUsed){alert('Магическое восстановление уже использовано сегодня.');return}const choice=prompt('Что восстановить после короткого отдыха?\n1 — одну ячейку 2-го круга\n2 — две ячейки 1-го круга\n3 — одну ячейку 1-го круга');if(!['1','2','3'].includes(choice))return;let applied=0;if(choice==='1'){let n=s.slots[2];s.slots[2]=Math.min(slotsMax(2),n+1);applied=s.slots[2]-n}else{let n=s.slots[1];s.slots[1]=Math.min(slotsMax(1),n+(choice==='2'?2:1));applied=s.slots[1]-n}if(!applied){alert('Выбранные ячейки уже полны.');return}s.arcaneUsed=true;msg('Магическое восстановление, восстановлено ячеек: '+applied);save()}
@@ -117,9 +138,6 @@ function coinTransaction(){let value=Number(el('coinAmount').value),type=el('coi
 function addNote(){let v=el('noteInput').value.trim();if(!v)return;msg(v);el('noteInput').value='';save()}
 function renderCharacter(){const stats=[['СИЛ',s.abilities.str],['ЛОВ',s.abilities.dex],['ТЕЛ',s.abilities.con],['ИНТ',s.abilities.int],['МДР',s.abilities.wis],['ХАР',s.abilities.cha]];el('charProficiency').textContent='Мастерство +'+proficiency();el('charSaves').textContent='Спасброски: Инт +'+(proficiency()+mod(s.abilities.int))+', Мдр +'+(proficiency()+mod(s.abilities.wis))+(s.feats.includes('resilientCon')?', Тел +'+(proficiency()+mod(s.abilities.con)):'');el('charPerception').textContent='Восприятие пасс. '+(10+proficiency()+mod(s.abilities.wis));el('statsGrid').innerHTML=stats.map(a=>`<div class="metric"><span>${a[0]}</span><strong>${a[1]}</strong><span>${mod(a[1])>=0?'+':''}${mod(a[1])}</span></div>`).join('');el('logList').innerHTML=s.logs.length?s.logs.map((v,i)=>`<div class="item"><div class="row"><span class="small muted">${esc(v.t)}</span><button class="btn mini ghost" onclick="deleteNote(${i})">×</button></div><div>${esc(v.text)}</div></div>`).join(''):'<p class="desc">Записей пока нет.</p>'}
 function deleteNote(i){s.logs.splice(i,1);save()}
-function exportSave(){let blob=new Blob([JSON.stringify(s,null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='lil_necropus_save.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)}
-async function importSave(ev){const f=ev.target.files[0];if(!f)return;try{let obj=JSON.parse(await f.text());if(!obj.items||!obj.spells||!obj.slots||!obj.coins)throw Error('Неподходящий файл');if(!confirm('Заменить текущее сохранение импортированным?'))return;s=obj;normalizeSave();save();alert('Сохранение загружено')}catch(e){alert('Не удалось загрузить: '+e.message)}finally{ev.target.value=''}}
-function resetAll(){if(confirm('Удалить все изменения и начать заново?')){s=defaults();save()}}
 
 function setExperience(value){let v=Number(value);if(!Number.isFinite(v)||v<0)return;s.xp=Math.floor(v);save()}
 function setLevelMode(value){s.levelMode=value;save()}
@@ -248,28 +266,155 @@ const CONDITIONS = {
 'Истощение':'Шесть уровней: 1 — помеха проверкам характеристик; 2 — скорость вдвое; 3 — помеха атакам и спасброскам; 4 — максимум ХП вдвое; 5 — скорость 0; 6 — смерть.'
 };
 let persistenceProblem = false;
+let recoveryMessage = '';
 const SAVE_KEY = 'dnd-support-neforiciy-offline';
+const LEGACY_KEY = 'necropus-v2';
 const CHECKPOINT_KEY = 'dnd-support-neforiciy-checkpoints';
-const BAK_KEY='dnd-support-neforiciy-last-good';
-function safeStorageGet(k){try{return localStorage.getItem(k)}catch(e){persistenceProblem=true;return null}}
-function safeStorageSet(k,v){try{localStorage.setItem(k,v);return true}catch(e){persistenceProblem=true;return false}}
-const backupLoaded=safeStorageGet(BAK_KEY);
-let lastCheckpoint = 0;
-function goodSaveString(obj){return JSON.stringify(obj)}
-function verifyState(x){return x&&typeof x==='object'&&!Array.isArray(x)&&Array.isArray(x.spells)&&Array.isArray(x.items)&&x.slots&&typeof x.slots==='object'&&x.coins&&typeof x.coins==='object'&&x.abilities&&typeof x.abilities==='object'}
+const BAK_KEY = 'dnd-support-neforiciy-last-good';
+function safeStorageGet(key){
+  try{return localStorage.getItem(key)}catch(e){persistenceProblem=true;return null}
+}
+function safeStorageSet(key,value){
+  try{localStorage.setItem(key,value);return true}catch(e){persistenceProblem=true;return false}
+}
+function verifyState(data){
+  const record = value => value !== null && typeof value==='object' && !Array.isArray(value);
+  const optionalRecord = value => value == null || record(value);
+  const entries = (value,valid) => Array.isArray(value) && value.every(entry => record(entry) && valid(entry));
+  const optionalEntries = (value,valid) => value == null || entries(value,valid);
+  const id = value => Number.isSafeInteger(value);
+  const number = value => Number.isFinite(value) || (typeof value==='string' && value.trim()!=='' && Number.isFinite(Number(value)));
+  return record(data)
+    && entries(data.spells,sp => typeof sp.name==='string' && typeof sp.info==='string' && id(sp.level) && sp.level>=0 && sp.level<=9)
+    && entries(data.items,item => id(item.id) && typeof item.name==='string' && number(item.qty) && number(item.weight))
+    && optionalRecord(data.slots) && optionalRecord(data.coins) && optionalRecord(data.abilities)
+    && ['str','dex','con','int','wis','cha'].every(key => data.abilities?.[key] == null || Number.isFinite(data.abilities[key]))
+    && ['level','xp','hp','dice','tempHp','pendingSpellPicks','shortRests'].every(key => data[key]==null || number(data[key]))
+    && Array.from({length:9},(_,i)=>i+1).every(key => data.slots?.[key]==null || number(data.slots[key]))
+    && ['cp','sp','ep','gp','pp'].every(key => data.coins?.[key]==null || Number.isFinite(data.coins[key]))
+    && optionalEntries(data.logs,()=>true)
+    && optionalEntries(data.sessions,session => id(session.id) && number(session.number))
+    && optionalEntries(data.customEffects,effect => id(effect.id) && typeof effect.name==='string')
+    && ['asiPending','feats','conditions'].every(key => data[key]==null || Array.isArray(data[key]));
+}
+function parseSave(raw){
+  try{
+    const data = JSON.parse(raw);
+    return verifyState(data) ? data : null;
+  }catch(e){return null}
+}
 function hashString(str){let h=2166136261;for(let i=0;i<str.length;i++){h^=str.charCodeAt(i);h=Math.imul(h,16777619)}return (h>>>0).toString(16)}
-function readCheckpoints(){try{const x=JSON.parse(safeStorageGet(CHECKPOINT_KEY)||'[]');return Array.isArray(x)?x.filter(a=>verifyState(a.data)).slice(0,5):[]}catch(e){return []}}
-function makeCheckpoint(silent=false){let list=readCheckpoints();list.unshift({at:new Date().toISOString(),level:s.level,hp:s.hp,data:JSON.parse(JSON.stringify(s))});const ok=safeStorageSet(CHECKPOINT_KEY,JSON.stringify(list.slice(0,5)));if(!silent)alert(ok?'Контрольная точка создана':'Не удалось сохранить контрольную точку. Скачай резервную копию в JSON.');renderBackupStatus()}
-function restoreCheckpoint(i){const x=readCheckpoints()[i];if(!x||!verifyState(x.data))return;if(!confirm('Восстановить сохранение от '+new Date(x.at).toLocaleString('ru-RU')+'? Текущее состояние будет заменено.'))return;makeCheckpoint(true);s=JSON.parse(JSON.stringify(x.data));normalizeSave();save()}
-function restorePreviousSave(){const raw=safeStorageGet(BAK_KEY);let obj;try{obj=JSON.parse(raw)}catch(e){}if(!verifyState(obj)){alert('Предыдущая сохранённая версия недоступна.');return}if(!confirm('Вернуть предыдущую сохранённую версию?'))return;makeCheckpoint(true);s=obj;normalizeSave();save()}
-function renderBackupStatus(){const e=el('saveStatus'),list=el('backupList');if(!e||!list)return;e.classList.toggle('error',persistenceProblem);e.textContent=persistenceProblem?'Автосохранение недоступно в этом браузере или при открытии через файловый менеджер. Экспортируй JSON после игры.':'Автосохранение активно. Последнее изменение: '+(new Date().toLocaleTimeString('ru-RU',{hour:'2-digit',minute:'2-digit'}));const backups=readCheckpoints();list.innerHTML=backups.length?backups.map((b,i)=>`<div class="backup-entry"><span><strong>${esc(new Date(b.at).toLocaleString('ru-RU'))}</strong><br><span class="desc">Ур. ${b.level} · ХП ${b.hp}</span></span><button class="btn mini" onclick="restoreCheckpoint(${i})">Вернуть</button></div>`).join(''):'<p class="desc">Контрольных точек пока нет.</p>'}
-// Исправляем ошибку отсутствия контроля quota при записи и сохраняем предыдущую рабочую копию.
-save=function(){const data=goodSaveString(s);const previous=safeStorageGet(SAVE_KEY);if(previous&&previous!==data)safeStorageSet(BAK_KEY,previous);const ok=safeStorageSet(SAVE_KEY,data);if(!ok)persistenceProblem=true;render()};
-exportSave=function(){const payload={app:'D&D Support Offline',format:3,created:new Date().toISOString(),character:JSON.parse(JSON.stringify(s))};const raw=JSON.stringify(payload.character);payload.checksum=hashString(raw);const blob=new Blob([JSON.stringify(payload,null,2)],{type:'application/json;charset=utf-8'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='neforiciy_backup_'+new Date().toISOString().slice(0,10)+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),5000)};
-importSave=async function(ev){const f=ev.target.files&&ev.target.files[0];if(!f)return;try{if(f.size>5*1024*1024)throw Error('Файл слишком большой');const parsed=JSON.parse(await f.text());let data;if(parsed&&parsed.format===3&&parsed.character){data=parsed.character;if(hashString(JSON.stringify(data))!==parsed.checksum)throw Error('Контрольная сумма не совпадает. Файл повреждён.')}else data=parsed;if(!verifyState(data))throw Error('Некорректная структура сохранения');if(!confirm('Заменить текущее состояние загруженной копией?'))return;makeCheckpoint(true);s=JSON.parse(JSON.stringify(data));normalizeSave();save();alert('Сохранение восстановлено')}catch(e){alert('Импорт не выполнен: '+e.message)}finally{ev.target.value=''}};
-resetAll=function(){if(!confirm('Удалить все изменения и начать заново?'))return;makeCheckpoint(true);s=defaults();s.conditions=[];s.customEffects=[];s.shortRests=0;save()};
+function readCheckpoints(){
+  try{
+    const list = JSON.parse(safeStorageGet(CHECKPOINT_KEY)||'[]');
+    return Array.isArray(list) ? list.filter(entry=>entry && verifyState(entry.data)).slice(0,5) : [];
+  }catch(e){return []}
+}
+
+let storedSave = safeStorageGet(SAVE_KEY);
+const legacySave = safeStorageGet(LEGACY_KEY);
+const backupSave = safeStorageGet(BAK_KEY);
+const loadedSave = parseSave(storedSave) ?? parseSave(backupSave) ?? readCheckpoints()[0]?.data ?? parseSave(legacySave);
+let damagedSave = !loadedSave && [storedSave,legacySave,backupSave].some(raw=>raw!==null);
+if(damagedSave) recoveryMessage = 'Сохранение не удалось прочитать. Для восстановления открой «Журнал» → «Данные».';
+else if(loadedSave && storedSave!==null && !parseSave(storedSave)) recoveryMessage = 'Основное сохранение не читается. Загружена резервная копия.';
+s = normalizeSave(loadedSave ?? defaults());
+
+function persistState(data, replacing=false){
+  const current = safeStorageGet(SAVE_KEY);
+  if(current!==storedSave || (damagedSave && !replacing)){
+    persistenceProblem = true;
+    return false;
+  }
+  const next = JSON.stringify(data);
+  // A damaged primary copy must never replace the last readable backup.
+  if(current!==next && parseSave(current) && !safeStorageSet(BAK_KEY,current)) return false;
+  if(!safeStorageSet(SAVE_KEY,next)) return false;
+  storedSave = next;
+  damagedSave = false;
+  recoveryMessage = '';
+  persistenceProblem = false;
+  return true;
+}
+function save(){
+  const alreadyFailed = persistenceProblem;
+  const ok = persistState(s);
+  render();
+  if(!ok && !alreadyFailed) alert('Изменения пока только в памяти. Их можно экспортировать через «Журнал» → «Данные».');
+}
+function makeCheckpoint(silent=false){
+  const list = readCheckpoints();
+  list.unshift({at:new Date().toISOString(),level:s.level,hp:s.hp,data:s});
+  const ok = safeStorageSet(CHECKPOINT_KEY,JSON.stringify(list.slice(0,5)));
+  if(!silent)alert(ok?'Контрольная точка создана':'Не удалось сохранить контрольную точку. Скачай резервную копию в JSON.');
+  renderBackupStatus();
+  return ok;
+}
+function replaceState(data){
+  const candidate = normalizeSave(data);
+  if((!damagedSave && !makeCheckpoint(true)) || !persistState(candidate,true)){
+    renderBackupStatus();
+    return false;
+  }
+  s = candidate;
+  render();
+  return true;
+}
+function restoreCheckpoint(i){
+  const entry = readCheckpoints()[i];
+  if(!entry || !confirm('Восстановить сохранение от '+new Date(entry.at).toLocaleString('ru-RU')+'?'))return;
+  if(!replaceState(entry.data))alert('Не удалось записать восстановленное сохранение.');
+}
+function restorePreviousSave(){
+  const data = parseSave(safeStorageGet(BAK_KEY));
+  if(!data){alert('Предыдущая сохранённая версия недоступна.');return}
+  if(!confirm('Вернуть предыдущую сохранённую версию?'))return;
+  if(!replaceState(data))alert('Не удалось записать восстановленное сохранение.');
+}
+function renderBackupStatus(){
+  const status = el('saveStatus');
+  status.classList.toggle('error',persistenceProblem || Boolean(recoveryMessage));
+  status.textContent = recoveryMessage || (persistenceProblem
+    ? 'Не удалось записать сохранение. Экспортируй текущие данные в JSON.'
+    : 'Автосохранение активно.');
+  const backups = readCheckpoints();
+  el('backupList').innerHTML = backups.length ? backups.map((b,i)=>`<div class="backup-entry"><span><strong>${esc(new Date(b.at).toLocaleString('ru-RU'))}</strong><br><span class="desc">Ур. ${esc(b.level)} · ХП ${esc(b.hp)}</span></span><button class="btn mini" onclick="restoreCheckpoint(${i})">Вернуть</button></div>`).join('') : '<p class="desc">Контрольных точек пока нет.</p>';
+}
+function exportSave(){
+  const payload = {app:'D&D Support Offline',format:3,created:new Date().toISOString(),character:s,checksum:hashString(JSON.stringify(s))};
+  const blob = new Blob([JSON.stringify(payload,null,2)],{type:'application/json;charset=utf-8'});
+  const link = document.createElement('a');
+  link.href = URL.createObjectURL(blob);
+  link.download = 'neforiciy_backup_'+new Date().toISOString().slice(0,10)+'.json';
+  link.click();
+  setTimeout(()=>URL.revokeObjectURL(link.href),5000);
+}
+async function importSave(ev){
+  const file = ev.target.files?.[0];
+  if(!file)return;
+  try{
+    if(file.size>5*1024*1024)throw Error('Файл слишком большой');
+    const parsed = JSON.parse(await file.text());
+    const data = parsed?.format===3 ? parsed.character : parsed;
+    if(parsed?.format===3 && (!data || hashString(JSON.stringify(data))!==parsed.checksum)){
+      throw Error('Контрольная сумма не совпадает. Файл повреждён.');
+    }
+    if(!verifyState(data))throw Error('Некорректная структура сохранения');
+    if(!confirm('Заменить текущее состояние загруженной копией?'))return;
+    if(!replaceState(data))throw Error('Не удалось записать данные в хранилище');
+    alert('Сохранение восстановлено');
+  }catch(e){
+    alert('Импорт не выполнен: '+e.message);
+  }finally{
+    ev.target.value='';
+  }
+}
+function resetAll(){
+  if(!confirm('Удалить все изменения и начать заново?'))return;
+  if(!replaceState(defaults()))alert('Не удалось записать новое сохранение.');
+}
 // Концентрация и временные хиты — ручной контроль; состояния не снимаем автоматически без решения мастера.
-function ensureFields(){s.conditions=Array.isArray(s.conditions)?s.conditions.filter(k=>Object.hasOwn(CONDITIONS,k)):[];s.customEffects=Array.isArray(s.customEffects)?s.customEffects.filter(x=>x&&typeof x.name==='string').slice(0,50):[];s.shortRests=Math.max(0,Number(s.shortRests)||0)}
+function ensureFields(){s.conditions=Array.isArray(s.conditions)?s.conditions.filter(k=>Object.hasOwn(CONDITIONS,k)):[];s.customEffects=Array.isArray(s.customEffects)?s.customEffects:[];s.shortRests=Math.max(0,Number(s.shortRests)||0)}
 ensureFields();
 function quickToggleCondition(name){ensureFields();if(!Object.hasOwn(CONDITIONS,name))return;s.conditions=s.conditions.includes(name)?s.conditions.filter(x=>x!==name):[...s.conditions,name];save()}
 function scrollToConditions(){el('conditionsCard').scrollIntoView({behavior:'smooth',block:'start'})}
@@ -292,6 +437,7 @@ const battleCards=el('battle').querySelectorAll(':scope > .card');
 if(firstGrid&&battleCards.length>=2){const advanced=document.createElement('details');advanced.className='details-box';advanced.innerHTML='<summary>Дополнительные показатели и управление ресурсами</summary><div class="details-content"></div>';firstGrid.before(advanced);const wrap=advanced.querySelector('.details-content');wrap.appendChild(firstGrid);wrap.appendChild(battleCards[0]);wrap.appendChild(battleCards[1]);}
 // Минимум действий: без автосписания магии/эффектов при отдыхе, если правила требуют решения мастера.
 render();
+if(recoveryMessage) alert(recoveryMessage);
 
 </script><script>
 if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')) {

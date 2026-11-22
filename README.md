@@ -5,7 +5,7 @@
 ## Запуск через GitHub Pages
 
 1. Создайте **публичный** репозиторий `dnd-support` в GitHub. Исходный лист персонажа (без будущих личных заметок) станет доступен всем, кто знает URL.
-2. Загрузите **содержимое** этого архива в корень репозитория: `index.html`, `sw.js`, `manifest.webmanifest`, папку `icons` и `README.md`.
+2. Загрузите **содержимое** этого архива в корень репозитория: `index.html`, `sw.js`, `manifest.webmanifest`, три PNG-иконки и `README.md`.
 3. Откройте **Settings → Pages → Build and deployment → Deploy from a branch**. Выберите `main` и `/(root)`, нажмите **Save**.
 4. Дождитесь появления ссылки на `https://<username>.github.io/dnd-support/`.
 5. На iPhone откройте сайт в Safari, нажмите «Поделиться» → «На экран Домой» → «Добавить».
