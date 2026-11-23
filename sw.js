@@ -1,5 +1,5 @@
 // Increment the cache version when changing the app shell.
-const CACHE_NAME = 'dnd-support-neforiciy-v5';
+const CACHE_NAME = 'dnd-support-neforiciy-v7';
 const SHELL = new URL('index.html', self.registration.scope).href;
 const ASSETS = [
   SHELL,
@@ -28,11 +28,13 @@ self.addEventListener('fetch', event => {
   const url = new URL(request.url);
   const isAppNavigation = request.mode === 'navigate'
     && (url.pathname === new URL(self.registration.scope).pathname || url.pathname === new URL(SHELL).pathname);
-  if (!isAppNavigation && !ASSETS.includes(request.url)) return;
+  url.search = '';
+  const asset = isAppNavigation ? SHELL : url.href;
+  if (!ASSETS.includes(asset)) return;
 
   event.respondWith((async () => {
     const cache = await caches.open(CACHE_NAME);
-    const cached = await cache.match(isAppNavigation ? SHELL : request);
+    const cached = await cache.match(asset);
     return cached || fetch(request);
   })());
 });
