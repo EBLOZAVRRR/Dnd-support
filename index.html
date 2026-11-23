@@ -129,7 +129,14 @@ function normalizeSave(data){
     levelMode:data.levelMode==='milestone'?'milestone':'xp',
     hp:clamp(data.hp,max,max),
     dice:clamp(data.dice,level,level),
-    slots:{...data.slots,...Object.fromEntries(Array.from({length:9},(_,i)=>[i+1,clamp(data.slots?.[i+1],0,slotProgress[level][i]||0)]))},
+    slots:{
+      ...data.slots,
+      ...Object.fromEntries(Array.from({length:9},(_,i)=>{
+        const maxSlots = slotProgress[level][i] || 0;
+        return [i+1,clamp(data.slots?.[i+1],maxSlots,maxSlots)];
+      }))
+    },
+    items:(data.items ?? base.items).map(item=>({...item,qty:Number(item.qty),weight:Number(item.weight)})),
     coins:{...base.coins,...data.coins},
     logs:data.logs??[], sessions:data.sessions??[], feats:data.feats??[], asiPending:data.asiPending??[],
     pendingSpellPicks:clamp(data.pendingSpellPicks,0),
@@ -373,7 +380,7 @@ function renderPlanner(){
 }
 function addSession(){const n=Number(el('sessionNo').value),title=el('sessionTitle').value.trim(),body=el('sessionText').value.trim();if(!Number.isInteger(n)||n<1||(!title&&!body)){alert('Укажи номер и название или заметку');return}s.sessions.unshift({id:Date.now(),number:n,title:title||'Без названия',body,date:new Date().toLocaleDateString('ru-RU')});el('sessionNo').value=n+1;el('sessionTitle').value='';el('sessionText').value='';save()}
 function removeSession(id){if(!confirm('Удалить эту запись?'))return;s.sessions=s.sessions.filter(x=>x.id!==id);save()}
-function renderSessions(){el('sessionList').innerHTML=s.sessions.length?s.sessions.map(x=>'<div class="session-card"><div class="row"><strong>Сессия '+x.number+' · '+esc(x.title)+'</strong><button class="btn mini ghost" onclick="removeSession('+x.id+')">Удалить</button></div><div class="desc">'+esc(x.date)+'</div><p class="desc">'+esc(x.body)+'</p></div>').join(''):'<p class="desc">Ещё нет записей.</p>'}
+function renderSessions(){el('sessionList').innerHTML=s.sessions.length?s.sessions.map(x=>'<div class="session-card"><div class="row"><strong>Сессия '+esc(x.number)+' · '+esc(x.title)+'</strong><button class="btn mini ghost" onclick="removeSession('+x.id+')">Удалить</button></div><div class="desc">'+esc(x.date)+'</div><p class="desc">'+esc(x.body)+'</p></div>').join(''):'<p class="desc">Ещё нет записей.</p>'}
 
 /* D&D Support v3 — автономные данные и интерфейс */
 const SPELL_DETAILS = {
@@ -486,16 +493,23 @@ function readCheckpoints(){
 }
 
 let storedSave = safeStorageGet(SAVE_KEY);
+const primarySave = parseSave(storedSave);
 const legacySave = safeStorageGet(LEGACY_KEY);
 const backupSave = safeStorageGet(BAK_KEY);
-const loadedSave = parseSave(storedSave) ?? parseSave(backupSave) ?? readCheckpoints()[0]?.data ?? parseSave(legacySave);
+const loadedSave = primarySave ?? parseSave(backupSave) ?? readCheckpoints()[0]?.data ?? parseSave(legacySave);
 let damagedSave = !loadedSave && [storedSave,legacySave,backupSave].some(raw=>raw!==null);
 if(damagedSave) recoveryMessage = 'Сохранение не удалось прочитать. Для восстановления открой «Журнал» → «Данные».';
-else if(loadedSave && storedSave!==null && !parseSave(storedSave)) recoveryMessage = 'Основное сохранение не читается. Загружена резервная копия.';
+else if(loadedSave && storedSave!==null && !primarySave) recoveryMessage = 'Основное сохранение не читается. Загружена резервная копия.';
 s = normalizeSave(loadedSave ?? defaults());
 
 function persistState(data, replacing=false){
-  const current = safeStorageGet(SAVE_KEY);
+  let current;
+  try {
+    current = localStorage.getItem(SAVE_KEY);
+  } catch {
+    persistenceProblem = true;
+    return false;
+  }
   if(current!==storedSave || (damagedSave && !replacing)){
     persistenceProblem = true;
     return false;
@@ -624,12 +638,16 @@ render();
 if(recoveryMessage) alert(recoveryMessage);
 
 </script><script>
-if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')) {
-  const offlineStatus = document.getElementById('offlineStatus');
+const offlineStatus = document.getElementById('offlineStatus');
+if ('serviceWorker' in navigator && window.isSecureContext) {
   offlineStatus.textContent = 'Подготовка к автономной работе…';
-  navigator.serviceWorker.ready.then(() => {
-    offlineStatus.textContent = 'Приложение готово к автономной работе.';
-  });
+  function updateOfflineStatus() {
+    if (navigator.serviceWorker.controller) {
+      offlineStatus.textContent = 'Приложение готово к автономной работе.';
+    }
+  }
+  navigator.serviceWorker.addEventListener('controllerchange', updateOfflineStatus);
+  updateOfflineStatus();
   window.addEventListener('load', async () => {
     try {
       const registration = await navigator.serviceWorker.register('./sw.js', {scope:'./'});
@@ -642,9 +660,12 @@ if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.
         });
       }
     } catch(err) {
+      if (navigator.serviceWorker.controller) return;
       offlineStatus.textContent = 'Автономная подготовка не завершилась. Открой приложение с интернетом.';
       console.warn('Offline cache unavailable', err);
     }
   });
+} else {
+  offlineStatus.textContent = 'Для автономной работы открой приложение по HTTPS или на localhost.';
 }
 </script></body></html>
